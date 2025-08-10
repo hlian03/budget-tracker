@@ -1,0 +1,259 @@
+// SASS VARIABLES
+
+$primary-color: #8e44ad;
+$text-color: #8e8dec;
+$gradient-start: #e431ea;
+$gradient-end: rgb(127, 196, 253);
+$header-gradient-end: rgb(229, 219, 219);
+$balance-bg: rgb(236, 151, 242);
+$card-bg: #ffc7e8;
+$form-bg: rgb(235, 183, 218);
+$history-bg: rgb(247, 197, 245);
+$border-color: #78f106;
+$error-color: rgb(21, 23, 20);
+$btn-income-bg: #dc44cb;
+$btn-expense-bg: #6426ac;
+$btn-text-color: rgb(17, 14, 14);
+$empty-message-color: #211a1a;
+$success-color: #27ae60;
+$danger-color: #e74c3c;
+
+
+// SASS MIXIN - GRADIENT BACKGROUNDS
+// This mixin creates gradient backgrounds with two colors
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient($color1, $color2);
+}
+
+// BASE STYLES
+html, body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    @include gradient($gradient-start, $gradient-end);
+}
+
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+
+header {
+    @include gradient($gradient-start, $header-gradient-end);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+// BALANCE SECTION
+.balance-section {
+    padding: 20px;
+    background: $balance-bg;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+
+.balance-cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.balance-card {
+    flex: 1;
+    background: $card-bg;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.balance-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.balance-amount {
+    font-size: 1.5em;
+}
+
+
+// FORM SECTION
+.form-section {
+    background: $form-bg;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+}
+
+
+.error-message {
+    color: $error-color;
+    font-size: 0.9em;
+    display: none;
+
+
+    &.show {
+        display: block;
+    }
+}
+
+
+// BUTTONS
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+
+    &-income {
+        background: $btn-income-bg;
+        color: $btn-text-color;
+    }
+
+
+    &-expense {
+        background: $btn-expense-bg;
+        color: $btn-text-color;
+    }
+}
+
+
+// HISTORY SECTION
+.history-section {
+    background: $history-bg;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+.history-list {
+    list-style: none;
+}
+
+
+.empty-message {
+    text-align: center;
+    color: $empty-message-color;
+}
+
+
+// Additional styles for transaction history items
+.transaction-item {
+    background: $card-bg;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.transaction-info {
+    flex: 1;
+}
+
+
+.transaction-category {
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 5px;
+}
+
+
+.transaction-date {
+    font-size: 0.8em;
+    color: #666;
+}
+
+
+.transaction-amount {
+    font-weight: bold;
+    font-size: 1.2em;
+
+
+    &.income-amount {
+        color: $success-color;
+    }
+
+
+    &.expense-amount {
+        color: $danger-color;
+    }
+}
+
+
+// RESPONSIVE DESIGN
+@media (max-width: 320px) {
+    header {
+        text-align: center;
+        padding: 69px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    header {
+        text-align: center;
+        padding: 80px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    header {
+        text-align: center;
+        padding: 100px;
+    }
+}
+
