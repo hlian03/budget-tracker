@@ -11,82 +11,80 @@
 <body>
     <header>
      <header>
-           <h1 class="title">✧˚ ༘ ⋆｡♡˚ Budget Tracker ✧˚ ༘ ⋆｡♡˚ </h1>
-           <p><strong>Save smart. Spend with purpose. Joy doesn't come with a price tag!</strong></p>
+         <h1 class="title">✧˚ ༘ ⋆｡♡˚ Budget Tracker ✧˚ ༘ ⋆｡♡˚ </h1>
+         <p><strong>Save smart. Spend with purpose. Joy doesn't come with a price tag!</strong></p>
        </header>
 
-       <!-- BALANCE DISPLAY SECTION -->
-       <section class="balance-section">
-           <h2>Your Money Summary</h2>
-           <div class="balance-cards">
-               <!-- Current Balance Card -->
-               <div class="balance-card">
-                   <div class="balance-label">Current Balance</div>
-                   <div class="balance-amount total-balance" id="total-balance">$0.00</div>
-               </div>
-               <!-- Total Income Card -->
-               <div class="balance-card">
-                   <div class="balance-label">Total Income</div>
-                   <div class="balance-amount total-income" id="total-income">$0.00</div>
-               </div>
-                <!--- Total Budget Card -->
-                <div class="balance-card">
-                   <div class="balance-label">Total Budget</div>
-                   <div class="balance-amount total-expenses" id="total-budget">$0.00</div>
-               </div>
-               <!-- Total Expenses Card -->
-               <div class="balance-card">
-                   <div class="balance-label">Total Expenses</div>
-                   <div class="balance-amount total-expenses" id="total-expenses">$0.00</div>
-               </div>
-           </div>
-       </section>
+    <!-- BALANCE DISPLAY SECTION -->
+    <section class="balance-section">
+        <h2>Your Money Summary</h2>
+        <div class="balance-cards">
+    
+     <!-- Current Balance Card -->
+     <div class="balance-card">
+     <div class="balance-label">Current Balance</div>
+     <div class="balance-amount total-balance" id="total-balance">$0.00</div>
+     
+     <!-- Total Income Card -->
+     <div class="balance-card">
+     <div class="balance-label">Total Income</div>
+     <div class="balance-amount total-income" id="total-income">$0.00</div>
+   
+     <!--- Total Budget Card -->
+     <div class="balance-card">
+     <div class="balance-label">Total Budget</div>
+     <div class="balance-amount total-expenses" id="total-budget">$0.00</div>
+ 
+     <!-- Total Expenses Card -->
+    <div class="balance-card">
+    <div class="balance-label">Total Expenses</div>
+    <div class="balance-amount total-expenses" id="total-expenses">$0.00</div>
+ </section>
 
-       <!-- FORM SECTION -->
-       <section class="form-section">
-           <h2>Add New Transaction</h2>
-           <form id="transaction-form">
+<!-- FORM SECTION -->
+<section class="form-section">
+ <h2>Add New Transaction</h2>
+ <form id="transaction-form">
 
-               <!-- Amount Input -->
-               <div class="form-group">
-                   <label for="amount">How much money?</label>
-                   <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
-                   <div class="error-message" id="amount-error"></div>
-               </div>
-               <!-- Category Selection -->
-               <div class="form-group">
-                   <label for="category">What category?</label>
-                   <select id="category" required>
-                       <option value="">Choose a category...</option>
-                       <option value="Total Budget"> Monthly Total Budget</option>
-                       <option value="salary"> Salary</option>
-                       <option value="grocery"> Groceries</option>
-                       <option value="gas"> Gas</option>
-                       <option value="shopping">Car Payment</option>
-                       <option value="shopping">Shopping</option>
-                       <option value="total-income">Total Income</option>
-                       <option value="Other">Other</option>
-                   </select>
-                   <div class="error-message" id="category-error"></div>
-               </div>
+<!-- Amount Input -->
+<div class="form-group">
+ <label for="amount">How much money?</label>
+ <input type="number" id="amount" placeholder="0.00" step="0.01" min="0.01" required>
+ <div class="error-message" id="amount-error"></div>
 
-            <!-- Action Buttons -->
-               <div class="button-group">
-                   <button type="button" class="btn btn-income" id="add-income-btn">
-                        Add Income (Money In)
-                   </button>
-                   <button type="button" class="btn btn-expense" id="add-expense-btn">
-                        Add Expense (Money Out)
-                   </button>
-               </div>
-           </form>
-       </section>
-       <!-- TRANSACTION HISTORY SECTION -->
-       <section class="history-section">
-           <h3> Your Transaction History</h3>
-           <ul class="history-list" id="history-list">
-               <li class="empty-message">No transactions yet. Add your first one above!</li>
-           </ul>
-       </section>
+ <!-- Category Selection -->
+ <div class="form-group">
+    <label for="category">What category?</label>
+    <select id="category" required>
+    <option value="">Choose a category...</option>
+    <option value="Total Budget"> Monthly Total Budget</option>
+    <option value="salary"> Salary</option>
+    <option value="grocery"> Groceries</option>
+    <option value="gas"> Gas</option>
+    <option value="shopping">Car Payment</option>
+    <option value="shopping">Shopping</option>
+    <option value="total-income">Total Income</option>git 
+    <option value="Other">Other</option>
+</select>
+  <div class="error-message" id="category-error"></div>
+           
+  <!-- Action Buttons -->
+   <div class="button-group">
+  <button type="button" class="btn btn-income" id="add-income-btn">
+  Add Income (Money In)
+</button>
+<button type="button" class="btn btn-expense" id="add-expense-btn">
+Add Expense (Money Out)
+</button>
+  </div>
+ </form>
+ </section>
+ <!-- TRANSACTION HISTORY SECTION -->
+ <section class="history-section">
+    <h3> Your Transaction History</h3>
+    <ul class="history-list" id="history-list">
+    <li class="empty-message">No transactions yet. Add your first one above!</li>
+ </ul>
+ </section>
 </body>
 </html>

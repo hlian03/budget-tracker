@@ -244,9 +244,8 @@ class Budget {
     }
 }
 
-// ================================
+
 // START THE APPLICATION
-// ================================
 document.addEventListener('DOMContentLoaded', function() {
     // Create the budget tracker
     const budgetTracker = new Budget();
